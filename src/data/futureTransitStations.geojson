@@ -1,0 +1,31 @@
+{
+"type": "FeatureCollection",
+"name": "futureTransitStations",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "LOCATION_N": "Birchmount", "STATUS": "In Delivery", "TECHNOLOGY": "LRT", "NAME": "Eglinton Crosstown LRT" }, "geometry": { "type": "Point", "coordinates": [ -79.277913549800346, 43.730067901320716 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Ionview", "STATUS": "In Delivery", "TECHNOLOGY": "LRT", "NAME": "Eglinton Crosstown LRT" }, "geometry": { "type": "Point", "coordinates": [ -79.271199751647856, 43.731435611413133 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Kennedy", "STATUS": "In Delivery", "TECHNOLOGY": "LRT", "NAME": "Eglinton Crosstown LRT" }, "geometry": { "type": "Point", "coordinates": [ -79.264532363275194, 43.732266101735114 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Hakimi Lebovic", "STATUS": "In Delivery", "TECHNOLOGY": "LRT", "NAME": "Eglinton Crosstown LRT" }, "geometry": { "type": "Point", "coordinates": [ -79.291488542254797, 43.72707144899006 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Pharmacy", "STATUS": "In Delivery", "TECHNOLOGY": "LRT", "NAME": "Eglinton Crosstown LRT" }, "geometry": { "type": "Point", "coordinates": [ -79.297549765299152, 43.725724305555545 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "O'Connor", "STATUS": "In Delivery", "TECHNOLOGY": "LRT", "NAME": "Eglinton Crosstown LRT" }, "geometry": { "type": "Point", "coordinates": [ -79.302584865064219, 43.724660007968858 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Golden Mile", "STATUS": "In Delivery", "TECHNOLOGY": "LRT", "NAME": "Eglinton Crosstown LRT" }, "geometry": { "type": "Point", "coordinates": [ -79.287641361087779, 43.72793740711019 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Victoria Park", "STATUS": "Existing", "TECHNOLOGY": "Subway", "NAME": "Bloor-Danforth Subway" }, "geometry": { "type": "Point", "coordinates": [ -79.289450037058316, 43.694621486879313 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Warden", "STATUS": "Existing", "TECHNOLOGY": "Subway", "NAME": "Bloor-Danforth Subway" }, "geometry": { "type": "Point", "coordinates": [ -79.279204972269468, 43.711186750072599 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Kennedy", "STATUS": "Existing", "TECHNOLOGY": "Subway", "NAME": "Bloor-Danforth Subway" }, "geometry": { "type": "Point", "coordinates": [ -79.264532363275194, 43.732266101735114 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Kennedy", "STATUS": "Existing", "TECHNOLOGY": "Subway (To Be Removed)", "NAME": "Scarborough RT" }, "geometry": { "type": "Point", "coordinates": [ -79.264532363275194, 43.732266101735114 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Scarborough Town Centre", "STATUS": "Advancing", "TECHNOLOGY": "Subway", "NAME": "Scarborough Subway" }, "geometry": { "type": "Point", "coordinates": [ -79.253426997003089, 43.776220174765086 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Kennedy", "STATUS": "Advancing", "TECHNOLOGY": "Subway", "NAME": "Scarborough Subway" }, "geometry": { "type": "Point", "coordinates": [ -79.264532363275194, 43.732266101735114 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Scarborough", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Lakeshore East" }, "geometry": { "type": "Point", "coordinates": [ -79.254829254195272, 43.717262021929706 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Eglinton", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Lakeshore East" }, "geometry": { "type": "Point", "coordinates": [ -79.230612216728986, 43.740410974572626 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Guildwood", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Lakeshore East" }, "geometry": { "type": "Point", "coordinates": [ -79.198087073795037, 43.754975186446217 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Rouge Hill", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Lakeshore East" }, "geometry": { "type": "Point", "coordinates": [ -79.130658919214682, 43.779700643863556 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Milliken", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Stouffville" }, "geometry": { "type": "Point", "coordinates": [ -79.301460596080631, 43.823048603154461 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Agincourt", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Stouffville" }, "geometry": { "type": "Point", "coordinates": [ -79.284372098001185, 43.786397036141651 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Kennedy", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Stouffville" }, "geometry": { "type": "Point", "coordinates": [ -79.264532363275194, 43.732266101735114 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Finch-Kennedy", "STATUS": "Proposed", "TECHNOLOGY": "GO Rail", "NAME": "Stouffville" }, "geometry": { "type": "Point", "coordinates": [ -79.291601071588659, 43.802518832937707 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Kennedy", "STATUS": "Proposed", "TECHNOLOGY": "LRT", "NAME": "Eglinton East LRT" }, "geometry": { "type": "Point", "coordinates": [ -79.264532363275194, 43.732266101735114 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "McCowan", "STATUS": "Advancing", "TECHNOLOGY": "Subway", "NAME": "Scarborough Subway" }, "geometry": { "type": "Point", "coordinates": [ -79.258773161347094, 43.78962166581119 ] } },
+{ "type": "Feature", "properties": { "LOCATION_N": "Lawrence East", "STATUS": "Advancing", "TECHNOLOGY": "Subway", "NAME": "Scarborough Subway" }, "geometry": { "type": "Point", "coordinates": [ -79.245456549965155, 43.755448365370768 ] } }
+]
+}

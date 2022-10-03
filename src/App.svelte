@@ -4,6 +4,7 @@
 	import Top from "./lib/Top.svelte"
 	import notScarborough from "./data/not_scarborough_osm.geo.json"
 	import bikeRoutes from "./data/bikeRoutes.geo.json"
+	import futureTransit from "./data/futureTransit.geo.json"
 
 	import Typeahead from "svelte-typeahead";
 	import Places from "./assets/places.geo.json";
@@ -13,8 +14,6 @@
 	
 
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w4c3h6M2tuMDIwazNuczU3bXA3ZXpvaSJ9.ShjnM8qiYP6yqz2PcAUBOg';
-
-	console.log(notScarborough.features[0])
 
 	let map;
 
@@ -31,9 +30,9 @@
 			style: 'mapbox://styles/schoolofcities/cl8sy8euo002f14tbqhwrexda',
 			center: [-79.22, 43.765], 
 			zoom: 12,
-			maxZoom: 17,
+			maxZoom: 15.5,
 			minZoom: 8,
-			bearing: -17,
+			bearing: -17.7,
 			maxBounds: bounds,
 			projection: 'globe',
 			scrollZoom: true,
@@ -52,9 +51,12 @@
 			});
 		map.addControl(scale, 'bottom-right');
 
+		// adding additional layers from geojson
 		map.on('load', function() {
 
 			const layers = map.getStyle().layers;
+
+			console.log(layers);
 			// Find the index of the first symbol layer in the map style.
 			let firstSymbolId;
 			for (const layer of layers) {
@@ -74,6 +76,11 @@
 				'data': bikeRoutes
 			});
 
+			map.addSource('futureTransit', {
+				'type': 'geojson',
+				'data': futureTransit
+			});
+
 			map.addLayer({
 				'id': 'bike',
 				'type': 'line',
@@ -84,6 +91,17 @@
 					'line-width': 1
 				}
 			}, firstSymbolId);
+
+			map.addLayer({
+				'id': 'futureTransit',
+				'type': 'line',
+				'source': 'futureTransit',
+				'layout': {},
+				'paint': {
+					'line-color': '#dfc8c8', 
+					'line-width': 2
+				}
+			}, 'rail');
 
 			map.addLayer({
 				'id': 'nsFill',
@@ -103,8 +121,8 @@
 				'layout': {},
 				'paint': {
 					'line-color': '#1E3765', 
-					'line-width': 2,
-					'line-dasharray': [3,3],
+					'line-width': 1,
+					'line-dasharray': [4,2],
 					'line-opacity':0.9
 				}
 			});
