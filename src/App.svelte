@@ -1,13 +1,19 @@
 <script>
 	import { onMount } from 'svelte'
 	import mapboxgl from "mapbox-gl";
+	import Top from "./lib/Top.svelte"
+	import notScarborough from "./data/not_scarborough_osm.geo.json"
+
 	import Typeahead from "svelte-typeahead";
 	import Places from "./assets/places.geo.json";
 	import Info from "./lib/Info.svelte";
 	import Select from "./lib/Select.svelte"
-	import Top from "./lib/Top.svelte"
+
+	
 
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w4c3h6M2tuMDIwazNuczU3bXA3ZXpvaSJ9.ShjnM8qiYP6yqz2PcAUBOg';
+
+	console.log(notScarborough.features[0])
 
 	let map;
 
@@ -25,7 +31,7 @@
 			center: [-79.22, 43.765], 
 			zoom: 12,
 			maxZoom: 17,
-			minZoom: 10,
+			minZoom: 8,
 			bearing: -17,
 			maxBounds: bounds,
 			projection: 'globe',
@@ -44,6 +50,39 @@
 			unit: 'metric'
 			});
 		map.addControl(scale, 'bottom-right');
+
+		map.on('load', function() {
+			map.addSource('notScarborough', {
+			'type': 'geojson',
+			'data': notScarborough.features[0]
+		});
+
+			map.addLayer({
+				'id': 'nsFill',
+				'type': 'fill',
+				'source': 'notScarborough', // reference the data source
+				'layout': {},
+				'paint': {
+					'fill-color': '#fff', // blue color fill
+					'fill-opacity': 0.6
+				}
+			});
+
+			map.addLayer({
+				'id': 'nsLine',
+				'type': 'line',
+				'source': 'notScarborough', // reference the data source
+				'layout': {},
+				'paint': {
+					'line-color': '#1E3765', // blue color fill
+					'line-width': 2,
+					'line-dasharray': [3,3],
+					'line-opacity':0.9
+				}
+			});
+		});
+
+		
 
 		// map.on('mouseenter', 'ct_fill', () => {
 		// 	map.getCanvas().style.cursor = 'pointer';
