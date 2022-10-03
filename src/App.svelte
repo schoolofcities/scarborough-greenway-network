@@ -44,13 +44,14 @@
 		map.addControl(new mapboxgl.AttributionControl({
 			customAttribution: 'Map by <a href="http://jamaps.github.io/about.html">Jeff Allen</a>'
 		}), 'bottom-right');
+		
 		map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
 		const scale = new mapboxgl.ScaleControl({
 			maxWidth: 100,
 			unit: 'metric'
 			});
-		map.addControl(scale, 'bottom-right');
+		map.addControl(scale, 'bottom-left');
 
 		// adding additional layers from geojson
 		map.on('load', function() {
@@ -218,11 +219,11 @@
 
 	<Top/>
 
-	<div id='map-wrapper' class="{pageWidth < 755 ? 'maps-small' : 'maps-big'}" >
+	<div id='map-wrapper' class="{pageWidth < 641 ? 'maps-small' : 'maps-big'}" >
 		<div id="map" bind:offsetWidth={pageWidth} ></div>
 	</div>
 
-	<Info/>
+	<Info {pageWidth}/>
 
 
 

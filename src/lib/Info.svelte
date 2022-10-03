@@ -6,7 +6,7 @@
 
 
 
-<div id="panel" class="{pageWidth < 755 ? 'mobile' : 'web'}">
+<div id="panel" class="{pageWidth < 641 ? 'mobile' : 'web'}">
 
 	<div id="title">
 		<h1>Scarborough Greenway Network</h1>
@@ -31,11 +31,10 @@
 		margin: auto;
         height: 256px;
 		border-top: solid 1px #1E3765;
-		float: left;
+		float: right;
 		z-index: 9;
 		background-color: rgb(250, 250, 250);
-		bottom: 0;
-        left: 0;
+        right: 0;
 		position: absolute;
 		opacity: 0.9;
 	}
@@ -43,12 +42,15 @@
         width: 100%;
         border-top-right-radius: 0px;
         border-right: none;
+		bottom: 0px;
     }
     .web {
-        width: 335px;
+        width: 400px;
         height: 255px;
 		border-right: solid 1px #1E3765;
-		border-top-right-radius: 1px;
+		border-bottom: solid 1px #1E3765;
+		/* border-top-right-radius: 1px; */
+		bottom: 25px;
     }
 
 	#title {
