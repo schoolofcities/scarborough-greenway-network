@@ -9,21 +9,25 @@
 
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w4c3h6M2tuMDIwazNuczU3bXA3ZXpvaSJ9.ShjnM8qiYP6yqz2PcAUBOg';
 
-	const data = Places.features;
-
 	let map;
-	let ctuid = "0";
 
 	let pageWidth;
+	
+	const bounds = [
+		[-79.56371,43.56172], // Southwest coordinates
+		[-79.04763, 44.03074] // Northeast coordinates
+	];
 	
 	onMount(() => {
 		map = new mapboxgl.Map({
 			container: 'map', 
-			style: 'mapbox://styles/schoolofcities/cl7j75gbd003b14ocub8skc7c',
-			center: [-79.45, 43.65], 
-			zoom: 10,
-			maxZoom: 12,
-			minZoom: 5,
+			style: 'mapbox://styles/schoolofcities/cl8sy8euo002f14tbqhwrexda',
+			center: [-79.22, 43.765], 
+			zoom: 12,
+			maxZoom: 17,
+			minZoom: 10,
+			bearing: -17,
+			maxBounds: bounds,
 			projection: 'globe',
 			scrollZoom: true,
 			attributionControl: false
@@ -33,7 +37,7 @@
 		map.addControl(new mapboxgl.AttributionControl({
 			customAttribution: 'Map by <a href="http://jamaps.github.io/about.html">Jeff Allen</a>'
 		}), 'bottom-right');
-		map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+		map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
 		const scale = new mapboxgl.ScaleControl({
 			maxWidth: 100,
@@ -41,34 +45,34 @@
 			});
 		map.addControl(scale, 'bottom-right');
 
-		map.on('mouseenter', 'ct_fill', () => {
-			map.getCanvas().style.cursor = 'pointer';
-		});
-		map.on('mouseleave', 'ct_fill', () => {
-			map.getCanvas().style.cursor = '';
-		})
+		// map.on('mouseenter', 'ct_fill', () => {
+		// 	map.getCanvas().style.cursor = 'pointer';
+		// });
+		// map.on('mouseleave', 'ct_fill', () => {
+		// 	map.getCanvas().style.cursor = '';
+		// })
 
-		map.on('click', 'ct_fill', (e) => {		
+		// map.on('click', 'ct_fill', (e) => {		
 
-			var features = map.queryRenderedFeatures(e.point, { layers: ['ct_fill'] });
+		// 	var features = map.queryRenderedFeatures(e.point, { layers: ['ct_fill'] });
 
-			if (ctuid != features[0].properties.CTUID) {
-				var style = [
-					"match",
-					["get", "CTUID"],
-					[features[0].properties.CTUID],
-					"#f1c500",
-					"#fff"
-				]
-				map.setPaintProperty('ct_fill', 'fill-color', style)
-				ctuid = features[0].properties.CTUID
+		// 	if (ctuid != features[0].properties.CTUID) {
+		// 		var style = [
+		// 			"match",
+		// 			["get", "CTUID"],
+		// 			[features[0].properties.CTUID],
+		// 			"#f1c500",
+		// 			"#fff"
+		// 		]
+		// 		map.setPaintProperty('ct_fill', 'fill-color', style)
+		// 		ctuid = features[0].properties.CTUID
 
-			} else {
-				map.setPaintProperty('ct_fill', 'fill-color', '#fff')
-				ctuid = '0'
-			}
+		// 	} else {
+		// 		map.setPaintProperty('ct_fill', 'fill-color', '#fff')
+		// 		ctuid = '0'
+		// 	}
 
-		});
+		// });
 
 	});
 
