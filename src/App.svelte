@@ -5,6 +5,7 @@
 	import notScarborough from "./data/not_scarborough_osm.geo.json"
 	import bikeRoutes from "./data/bikeRoutes.geo.json"
 	import futureTransit from "./data/futureTransit.geo.json"
+	import futureTransitStations from "./data/futureTransitStations.geo.json"
 
 	import Typeahead from "svelte-typeahead";
 	import Places from "./assets/places.geo.json";
@@ -81,6 +82,11 @@
 				'data': futureTransit
 			});
 
+			map.addSource('futureTransitStations', {
+				'type': 'geojson',
+				'data': futureTransitStations
+			});
+
 			map.addLayer({
 				'id': 'bike',
 				'type': 'line',
@@ -93,13 +99,33 @@
 			}, firstSymbolId);
 
 			map.addLayer({
+				'id': 'futureTransitStations',
+				'type': 'circle',
+				'source': 'futureTransitStations',
+				'layout': {},
+				'paint': {
+					'circle-color': '#dfc8c8', 
+					'circle-radius': [
+						"interpolate",
+						["linear"],
+						["zoom"],
+						8,
+						2,
+						16,
+						10
+					]
+				}
+			}, 'rail');
+
+			map.addLayer({
 				'id': 'futureTransit',
 				'type': 'line',
 				'source': 'futureTransit',
 				'layout': {},
 				'paint': {
 					'line-color': '#dfc8c8', 
-					'line-width': 2
+					'line-width': 2,
+					'line-dasharray': [2,2]
 				}
 			}, 'rail');
 
