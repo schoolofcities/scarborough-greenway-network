@@ -1,9 +1,4 @@
 <script>
-    import Circle from "./circle.svelte";
-    import Legend from "./Legend.svelte";
-    function hideShow() {
-		console.log("meow")
-	}
 
     export let pageWidth;
 
@@ -58,8 +53,8 @@
 
 	#title {
 		max-width: 550px;
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: 12px;
+		margin-right: 12px;
 		padding-bottom: 8px;
 		margin-bottom: 0px;
 	}

@@ -3,6 +3,7 @@
 	import mapboxgl from "mapbox-gl";
 	import Top from "./lib/Top.svelte"
 	import notScarborough from "./data/not_scarborough_osm.geo.json"
+	import bikeRoutes from "./data/bikeRoutes.geo.json"
 
 	import Typeahead from "svelte-typeahead";
 	import Places from "./assets/places.geo.json";
@@ -52,18 +53,45 @@
 		map.addControl(scale, 'bottom-right');
 
 		map.on('load', function() {
+
+			const layers = map.getStyle().layers;
+			// Find the index of the first symbol layer in the map style.
+			let firstSymbolId;
+			for (const layer of layers) {
+				if (layer.type === 'symbol') {
+					firstSymbolId = layer.id;
+					break;
+				}
+			}
+
 			map.addSource('notScarborough', {
-			'type': 'geojson',
-			'data': notScarborough.features[0]
-		});
+				'type': 'geojson',
+				'data': notScarborough.features[0]
+			});
+
+			map.addSource('bikeRoutes', {
+				'type': 'geojson',
+				'data': bikeRoutes
+			});
+
+			map.addLayer({
+				'id': 'bike',
+				'type': 'line',
+				'source': 'bikeRoutes',
+				'layout': {},
+				'paint': {
+					'line-color': '#8DBF2E', 
+					'line-width': 2
+				}
+			}, firstSymbolId);
 
 			map.addLayer({
 				'id': 'nsFill',
 				'type': 'fill',
-				'source': 'notScarborough', // reference the data source
+				'source': 'notScarborough',
 				'layout': {},
 				'paint': {
-					'fill-color': '#fff', // blue color fill
+					'fill-color': '#fff', 
 					'fill-opacity': 0.6
 				}
 			});
@@ -71,15 +99,19 @@
 			map.addLayer({
 				'id': 'nsLine',
 				'type': 'line',
-				'source': 'notScarborough', // reference the data source
+				'source': 'notScarborough',
 				'layout': {},
 				'paint': {
-					'line-color': '#1E3765', // blue color fill
+					'line-color': '#1E3765', 
 					'line-width': 2,
 					'line-dasharray': [3,3],
 					'line-opacity':0.9
 				}
 			});
+
+			
+
+			
 		});
 
 		
