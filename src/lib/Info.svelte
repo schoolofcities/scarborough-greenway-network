@@ -14,14 +14,11 @@
 <div id="panel" class="{pageWidth < 755 ? 'mobile' : 'web'}">
 
 	<div id="title">
-		<h1>25 Years of Population Growth & Decline in Canadian Cities</h1>
+		<h1>Scarborough Greenway Network</h1>
 
 		<p>
-			<p>Visualizing by neighbourhood census tracts how the population has increased <Circle stroke="#007FA3" fill="#6FC7EA"/> or decreased <Circle stroke="#dc4633" fill="#ff5842"/> between <span id="bold">1996</span> and <span id="bold">2021</span>. <br> The area of the circles are proportional to the growth or decline in population in each neighbourhood:
-
+			Hi!
 		</p>
-
-        <Legend/>
         
 	</div>
 
@@ -56,7 +53,7 @@
         width: 335px;
         height: 255px;
 		border-right: solid 1px #1E3765;
-		border-top-right-radius: 25px;
+		border-top-right-radius: 1px;
     }
 
 	#title {

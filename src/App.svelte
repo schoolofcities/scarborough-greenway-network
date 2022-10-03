@@ -143,10 +143,12 @@
 	<Top/>
 
 	<div id='map-wrapper' class="{pageWidth < 755 ? 'maps-small' : 'maps-big'}" >
-		<!-- class="{pageWidth < 755 ? 'maps-small' : 'maps-big'}" -->
-	<div id="map" bind:offsetWidth={pageWidth} ></div>
-
+		<div id="map" bind:offsetWidth={pageWidth} ></div>
 	</div>
+
+	<Info/>
+
+
 
 </main>
 
