@@ -20,10 +20,15 @@
 
 	let pageWidth;
 	
-	const bounds = [
-		[-79.56371,43.56172], // Southwest coordinates
+	const maxBounds = [
+		[-79.56371, 43.56172], // Southwest coordinates
 		[-79.04763, 44.03074] // Northeast coordinates
 	];
+
+	const scarBounds = [
+		[-79.30, 43.66],
+		[-79.10, 43.78]
+	]
 	
 	onMount(() => {
 		map = new mapboxgl.Map({
@@ -34,16 +39,14 @@
 			maxZoom: 15.5,
 			minZoom: 8,
 			bearing: -17.7,
-			maxBounds: bounds,
+			maxBounds: maxBounds,
 			projection: 'globe',
 			scrollZoom: true,
 			attributionControl: false
 		});
 		
 		
-		map.addControl(new mapboxgl.AttributionControl({
-			customAttribution: 'Map by <a href="http://jamaps.github.io/about.html">Jeff Allen</a>'
-		}), 'bottom-right');
+		
 		
 		map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
@@ -97,7 +100,7 @@
 					'line-color': '#8DBF2E', 
 					'line-width': 1
 				}
-			}, firstSymbolId);
+			}, 'rail');
 
 			map.addLayer({
 				'id': 'futureTransitStations',
@@ -147,17 +150,20 @@
 				'source': 'notScarborough',
 				'layout': {},
 				'paint': {
-					'line-color': '#1E3765', 
+					'line-color': '#0D534D', 
 					'line-width': 1,
-					'line-dasharray': [4,2],
-					'line-opacity':0.9
+					'line-dasharray': [4,1],
+					'line-opacity':1
 				}
 			});
 
-			
-
+			// map.fitBounds(scarBounds, {bearing: -17.7});
 			
 		});
+
+		// map.addControl(new mapboxgl.AttributionControl({
+		// 		// customAttribution: 'Map by <b><a href="http://jamaps.github.io/about.html">Jeff Allen</a></b>'
+		// 	}), 'bottom-right');
 
 		
 

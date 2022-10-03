@@ -10,18 +10,19 @@
 
 	<div id="title">
 		<h1>Scarborough Greenway Network</h1>
-
-		<h2>
-			Towards the world's best offroad trail network
-		</h2>
-        
+		<h2>Towards the world's best offroad trail network</h2>
 	</div>
 
-	<a href="https://github.com/schoolofcities/population-change-canadian-cities-1996-2021/">
+	<!-- <a href="https://github.com/schoolofcities/population-change-canadian-cities-1996-2021/">
 		<div id="more-less" >
 			<p>click here to read more</p>
 		</div>
-	</a>
+	</a> -->
+
+	<p id="attribution">
+		Map built by <a href="https://jamaps.github.io">Jeff Allen</a> with  
+		©<a href='https://www.mapbox.com/about/maps/'>Mapbox</a> & ©<a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> / <a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>
+	</p>
 
 </div>
 
@@ -30,13 +31,15 @@
     #panel {
 		margin: auto;
         height: 256px;
-		border-top: solid 1px #1E3765;
+		border-top: solid 1px #0D534D;
 		float: right;
 		z-index: 9;
 		background-color: rgb(250, 250, 250);
         right: 0;
 		position: absolute;
 		opacity: 0.9;
+		box-shadow: 0 3px 0 0 rgba(197, 197, 197, 0.168);
+		
 	}
     .mobile {
         width: 100%;
@@ -47,9 +50,8 @@
     .web {
         width: 400px;
         height: 255px;
-		border-right: solid 1px #1E3765;
-		border-bottom: solid 1px #1E3765;
-		/* border-top-right-radius: 1px; */
+		border-left: solid 1px #0D534D;
+		border-bottom: solid 1px #0D534D;
 		bottom: 25px;
     }
 
@@ -64,7 +66,7 @@
 	#title h1 {
 		font-family: Roboto, sans-serif;
 		font-size: 21px;
-		color: #1E3765
+		color: #0D534D
 	}
 
 	#title h2 {
@@ -73,6 +75,20 @@
 		font-family: Roboto, sans-serif;
 		font-size: 15px;
 		line-height: 1.75;
+	}
+
+	#attribution {
+		font-family: Roboto, sans-serif;
+		font-size: 10px;
+		margin-left: 12px;
+		margin-right: 12px;
+	}
+	#attribution a {
+		color: rgb(74, 74, 74);
+		text-decoration: underline;
+	}
+	#attribution a:hover {
+		color: black;
 	}
 
 	#bold {
@@ -89,8 +105,8 @@
 		margin-top: -15px;
 		padding-left: 20px;
 		padding-right: 20px;
-		border-top: solid 1px #1E3765;
-        border-bottom: solid 1px #1E3765;
+		border-top: solid 1px #0D534D;
+        border-bottom: solid 1px #0D534D;
 		font-family: Roboto, sans-serif;
 		font-size: 12px;
 		background-color: rgb(225, 225, 225);
@@ -102,7 +118,7 @@
 	}
 
 	#more-less p {
-		color: #1E3765;
+		color: #0D534D;
 		font-family: Roboto, sans-serif;
 		padding: 0px;
 		margin: 0px;

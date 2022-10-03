@@ -14,7 +14,7 @@
 		height: 50px;
 		background-color: #fff;
 		margin-bottom: 20px;
-		border-bottom: 1px solid rgb(219, 219, 219);
+		border-bottom: 1px solid #0D534D;
 		width: 100%;
 		min-width: 200px;
 		padding-left: 0px;
