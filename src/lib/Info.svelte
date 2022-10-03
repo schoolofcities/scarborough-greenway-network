@@ -11,9 +11,9 @@
 	<div id="title">
 		<h1>Scarborough Greenway Network</h1>
 
-		<p>
-			Hi!
-		</p>
+		<h2>
+			Towards the world's best offroad trail network
+		</h2>
         
 	</div>
 
@@ -61,15 +61,15 @@
 
 	#title h1 {
 		font-family: Roboto, sans-serif;
-		font-size: 20px;
+		font-size: 21px;
 		color: #1E3765
 	}
 
-	#title p {
+	#title h2 {
 		margin-top: -5px;
 		color: rgb(70, 70, 70);
 		font-family: Roboto, sans-serif;
-		font-size: 12px;
+		font-size: 15px;
 		line-height: 1.75;
 	}
 

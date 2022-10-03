@@ -81,7 +81,7 @@
 				'layout': {},
 				'paint': {
 					'line-color': '#8DBF2E', 
-					'line-width': 2
+					'line-width': 1
 				}
 			}, firstSymbolId);
 
