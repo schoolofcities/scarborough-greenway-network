@@ -8,7 +8,6 @@
 	import futureTransitStations from "./data/futureTransitStations.geo.json"
 
 	import Typeahead from "svelte-typeahead";
-	import Places from "./assets/places.geo.json";
 	import Info from "./lib/Info.svelte";
 	import Select from "./lib/Select.svelte"
 
@@ -21,13 +20,13 @@
 	let pageWidth;
 	
 	const maxBounds = [
-		[-79.56371, 43.56172], // Southwest coordinates
-		[-79.04763, 44.03074] // Northeast coordinates
+		[-79.56371, 43.56172], // SW coords
+		[-79.04763, 44.03074] // NE coords
 	];
 
 	const scarBounds = [
-		[-79.30, 43.66],
-		[-79.10, 43.78]
+		[-79.30, 43.66], // SW coords
+		[-79.10, 43.78] // NE coords
 	]
 	
 	onMount(() => {
@@ -276,18 +275,6 @@
 		padding: 0px;
 		margin: 0px;
 		background-color: #fff;
-	}
-	#search-results {
-		color: #1E3765;
-		font-family: Roboto, sans-serif;
-	}
-	#search {
-		position: absolute;
-		width: 260px;
-		top: 62px;
-		left: 5px;
-		z-index: 99;
-		opacity: 0.93;
 	}
 
 	#map-wrapper {
