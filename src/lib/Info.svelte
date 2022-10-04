@@ -10,7 +10,52 @@
 
 	<div id="title">
 		<h1>Scarborough Greenway Network</h1>
-		<h2>Towards the world's best offroad trail network</h2>
+		<h2><i>Towards the world's best offroad trail network</i></h2>
+	</div>
+
+	<div id="items">
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6D247A;stroke-width:3" />
+				</svg>
+				East Highland Creek Greenway
+			</p>
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6D247A;stroke-width:3" />
+				</svg>
+				West Highland Creek Greenway
+			</p>
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#007FA3;stroke-width:3" />
+				</svg>
+				Taylor Massey Creek Greenway
+			</p>
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6FC7EA;stroke-width:3" />
+				</svg>
+				Rouge Park Greenway
+			</p>
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#DC4633;stroke-width:3" />
+				</svg>
+				Waterfront Greenway
+			</p>
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#00A189;stroke-width:3" />
+				</svg>
+				Finch Hydro Corridor Greenway
+			</p>
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#F1C500;stroke-width:3" />
+				</svg>
+				The Meadoway
+			</p>
 	</div>
 
 	<!-- <a href="https://github.com/schoolofcities/population-change-canadian-cities-1996-2021/">
@@ -48,7 +93,7 @@
 		bottom: 0px;
     }
     .web {
-        width: 400px;
+        width: 370px;
         height: 255px;
 		border-left: solid 1px #0D534D;
 		border-bottom: solid 1px #0D534D;
@@ -59,14 +104,18 @@
 		max-width: 550px;
 		margin-left: 12px;
 		margin-right: 12px;
-		padding-bottom: 8px;
 		margin-bottom: 0px;
+		border-bottom: solid 1px #0D534D;
 	}
 
 	#title h1 {
 		font-family: Roboto, sans-serif;
-		font-size: 21px;
-		color: #0D534D
+		font-size: 22px;
+		color: #0D534D;
+		padding: 0px;
+		padding-top: 12px;
+		padding-bottom: 0px;
+		margin: 0px;
 	}
 
 	#title h2 {
@@ -75,7 +124,28 @@
 		font-family: Roboto, sans-serif;
 		font-size: 15px;
 		line-height: 1.75;
+		padding: 0px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin: 0px;
 	}
+
+	#items {
+		margin-left: 12px;
+		margin-right: 12px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		border-bottom: solid 1px #0D534D;
+	}
+
+	#item {
+		font-family: Roboto, sans-serif;
+		font-size: 13px;
+		margin: 0px;
+		padding: 0px;
+		color: rgb(70, 70, 70);
+	}
+	
 
 	#attribution {
 		font-family: Roboto, sans-serif;
