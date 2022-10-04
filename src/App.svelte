@@ -187,13 +187,22 @@
 				}
 			});
 
-			// map.fitBounds(scarBounds, {bearing: -17.7});
 			
 		});
 
-		// map.addControl(new mapboxgl.AttributionControl({
-		// 		// customAttribution: 'Map by <b><a href="http://jamaps.github.io/about.html">Jeff Allen</a></b>'
-		// 	}), 'bottom-right');
+		if (pageWidth < 560) {
+		map.zoomTo(10)
+		} else if (pageWidth < 700) {
+		map.zoomTo(10.5)
+		} else if (pageWidth < 900) {
+		map.zoomTo(11)
+		} else if (pageWidth < 1100) {
+		map.zoomTo(11.5)
+		} else {
+		map.zoomTo(12)
+		}
+
+
 
 		
 
@@ -226,8 +235,8 @@
 
 		// });
 
+		
 	});
-
 	
 
 	function placeClick(city) {

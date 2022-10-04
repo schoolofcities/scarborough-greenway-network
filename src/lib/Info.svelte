@@ -22,7 +22,7 @@
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6D247A;stroke-width:3" />
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#AB1368;stroke-width:3" />
 				</svg>
 				West Highland Creek Greenway
 			</p>
@@ -97,11 +97,10 @@
         height: 255px;
 		border-left: solid 1px #0D534D;
 		border-bottom: solid 1px #0D534D;
-		bottom: 25px;
+		bottom: 5px;
     }
 
 	#title {
-		max-width: 550px;
 		margin-left: 12px;
 		margin-right: 12px;
 		margin-bottom: 0px;
