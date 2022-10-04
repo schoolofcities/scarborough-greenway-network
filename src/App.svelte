@@ -6,8 +6,8 @@
 	import bikeRoutes from "./data/bikeRoutes.geo.json"
 	import futureTransit from "./data/futureTransit.geo.json"
 	import futureTransitStations from "./data/futureTransitStations.geo.json"
+	import greenwayNetwork from "./data/greenwayNetwork.geo.json"
 
-	import Typeahead from "svelte-typeahead";
 	import Info from "./lib/Info.svelte";
 	import Select from "./lib/Select.svelte"
 
@@ -35,7 +35,7 @@
 			style: 'mapbox://styles/schoolofcities/cl8sy8euo002f14tbqhwrexda',
 			center: [-79.22, 43.765], 
 			zoom: 12,
-			maxZoom: 15.5,
+			maxZoom: 13.5,
 			minZoom: 8,
 			bearing: -17.7,
 			maxBounds: maxBounds,
@@ -43,9 +43,6 @@
 			scrollZoom: true,
 			attributionControl: false
 		});
-		
-		
-		
 		
 		map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
@@ -90,6 +87,11 @@
 				'data': futureTransitStations
 			});
 
+			map.addSource('greenwayNetwork', {
+				'type': 'geojson',
+				'data': greenwayNetwork
+			});
+
 			map.addLayer({
 				'id': 'bike',
 				'type': 'line',
@@ -131,6 +133,35 @@
 					'line-dasharray': [2,2]
 				}
 			}, 'rail');
+
+			map.addLayer({
+				'id': 'greenwayNetwork',
+				'type': 'line',
+				'source': 'greenwayNetwork',
+				'layout': {},
+				'paint': {
+					'line-color': [
+						'match',
+						['get', 'route'],
+						'east_highland',
+						'#6D247A',
+						'west_highland',
+						'#AB1368',
+						'meadoway',
+						'#F1C500',
+						'taylor_massey',
+						'#007FA3',
+						'lake_ontario',
+						'#DC4633',
+						'rouge_park',
+						'#6FC7EA',
+						'finch',
+						'#00A189',
+						/* other */ '#ccc'
+						],
+					'line-width': 3
+				}
+			}, 'bridge-simple');
 
 			map.addLayer({
 				'id': 'nsFill',
