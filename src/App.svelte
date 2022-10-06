@@ -216,16 +216,16 @@
 			
 		});
 
-		if (pageWidth < 560) {
+		if (pageWidth < 500) {
 		map.zoomTo(10)
 		} else if (pageWidth < 700) {
-		map.zoomTo(10)
+		map.zoomTo(10.5)
 		} else if (pageWidth < 900) {
-		map.zoomTo(10)
-		} else if (pageWidth < 1100) {
 		map.zoomTo(11)
+		} else if (pageWidth < 1100) {
+		map.zoomTo(11.5)
 		} else {
-		map.zoomTo(12)
+		map.zoomTo(11.75)
 		}
 
 
