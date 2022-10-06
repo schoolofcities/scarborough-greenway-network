@@ -189,7 +189,7 @@
 				'paint': {
 					'line-color': '#fff', 
 					'line-width': 4,
-					'line-dasharray': [0.5,1]
+					'line-dasharray': [0.5,0.5]
 				}
 			});
 
