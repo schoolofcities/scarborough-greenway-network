@@ -14,6 +14,7 @@
 	</div>
 
 	<div id="items">
+		<div id="items-left">
 			<p id="item">
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6D247A;stroke-width:3" />
@@ -34,10 +35,12 @@
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6FC7EA;stroke-width:3" />
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#00A189;stroke-width:3" />
 				</svg>
-				Rouge Park Greenway
+				Finch Hydro Corridor Greenway
 			</p>
+		</div>
+		<div id="items-right">
 			<p id="item">
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#DC4633;stroke-width:3" />
@@ -46,9 +49,9 @@
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#00A189;stroke-width:3" />
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6FC7EA;stroke-width:3" />
 				</svg>
-				Finch Hydro Corridor Greenway
+				Rouge Park Greenway
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
@@ -56,6 +59,7 @@
 				</svg>
 				The Meadoway
 			</p>
+		</div>
 	</div>
 
 	<!-- <a href="https://github.com/schoolofcities/population-change-canadian-cities-1996-2021/">

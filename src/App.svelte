@@ -206,12 +206,12 @@
 
 		
 
-		// map.on('mouseenter', 'ct_fill', () => {
-		// 	map.getCanvas().style.cursor = 'pointer';
-		// });
-		// map.on('mouseleave', 'ct_fill', () => {
-		// 	map.getCanvas().style.cursor = '';
-		// })
+		map.on('mouseenter', 'greenwayNetwork', () => {
+			map.getCanvas().style.cursor = 'pointer';
+		});
+		map.on('mouseleave', 'greenwayNetwork', () => {
+			map.getCanvas().style.cursor = '';
+		})
 
 		// map.on('click', 'ct_fill', (e) => {		
 
