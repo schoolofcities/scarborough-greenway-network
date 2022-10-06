@@ -1,5 +1,8 @@
 <script>
 
+	import logo from '../assets/top-logo.svg'
+	import sumoLogo from '../assets/sumo-logo.svg'
+
     export let pageWidth;
 
 </script>
@@ -16,11 +19,9 @@
 	<div id="items">
 
 		<div id="items-status">
+
 			<p id="item">
-				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#464646;stroke-width:3" />
-				</svg>
-				Existing &nbsp; &nbsp; &nbsp;
+				
 
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#464646;stroke-width:3" />
@@ -30,12 +31,18 @@
 					<line x1="14" y1="5" x2="15" y2="5" style="stroke:#fff;stroke-width:3" />
 					<line x1="18" y1="5" x2="19" y2="5" style="stroke:#fff;stroke-width:3" />
 				</svg>
-				Proposed
+				Proposed Trail &nbsp;
+
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#464646;stroke-width:3" />
+				</svg>
+				Existing Trail (may need upgrades)
 			</p>
 		</div>
 
-		<div id="items-left">
+		<div id="items-left" class="{pageWidth < 395 ? 'mobile-l' : 'web-l'}">
 			<p id="item">
+
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6D247A;stroke-width:3" />
 				</svg>
@@ -60,7 +67,8 @@
 				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Finch Hydro Corridor Greenway</a>
 			</p>
 		</div>
-		<div id="items-right">
+
+		<div id="items-right" class="{pageWidth < 395 ? 'mobile-r' : 'web-r'}">
 			<p id="item">
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#DC4633;stroke-width:3" />
@@ -84,7 +92,7 @@
 	</div>
 
 	<div id="report">
-		<p><a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Click here to read the report  </a> by André Sorensen,
+		<p><a href="https://www.mobilitynetwork.utoronto.ca/wp-content/uploads/2022/10/The-Scarborough-Greenway-Network-Oct-2022.pdf" target="_blank">Click here to read the report  </a> by André Sorensen,
 			Amaan Jabbar,
 			Karen Khan,
 			Allison Oki, and
@@ -97,6 +105,14 @@
 		</div>
 	</a> -->
 
+	<div id="logo">
+		
+		<a href="https://www.schoolofcities.utoronto.ca/"><img height="55" src={logo} alt="School of Cities"></a>
+
+		<a href="https://www.utsc.utoronto.ca/suburban-mobilities/"><img img height="65" src={sumoLogo} alt="Suburban Mobilities Research Cluster"></a>
+		
+	</div>
+
 	<p id="attribution">
 		Map built by <a href="https://jamaps.github.io" target="_blank">Jeff Allen</a> with  
 		©<a href='https://www.mapbox.com/about/maps/' target="_blank">Mapbox</a> & ©<a href='http://www.openstreetmap.org/copyright' target="_blank">OpenStreetMap</a> / <a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>
@@ -108,7 +124,7 @@
 <style>
     #panel {
 		margin: auto;
-        height: 267px;
+        height: 342px;
 		border-top: solid 1px #0D534D;
 		float: right;
 		z-index: 9;
@@ -117,7 +133,6 @@
 		position: absolute;
 		opacity: 0.94;
 		box-shadow: 0 3px 0 0 rgba(197, 197, 197, 0.168);
-		
 	}
     .mobile {
         width: 100%;
@@ -143,7 +158,7 @@
 
 	#title h1 {
 		font-family: Roboto, sans-serif;
-		font-size: 22px;
+		font-size: 23px;
 		color: #0D534D;
 		padding: 0px;
 		padding-top: 12px;
@@ -155,7 +170,7 @@
 		margin-top: -5px;
 		color: rgb(70, 70, 70);
 		font-family: Roboto, sans-serif;
-		font-size: 15px;
+		font-size: 16px;
 		line-height: 1.75;
 		padding: 0px;
 		padding-top: 5px;
@@ -172,18 +187,37 @@
 		overflow: hidden;
 	}
 
+	
+
 	#items-status {
-		padding-bottom: 5px;
+		padding-bottom: 7px;
 	}
 
 	#items-left {
-		float: left;
 		padding-right: 15px;
 	}
 
-	#items-right {
+	/* #items-right {
+		margin-left: 15px;
+	} */
+
+	.web-l {
+		float: left;
+	}
+
+	.mobile-l {
+		float: none;
+	}
+
+	.web-r {
 		margin-left: 15px;
 	}
+
+	.mobile-r {
+		margin-left: 0px;
+	}
+
+	
 
 	#item {
 		font-family: Roboto, sans-serif;
@@ -222,6 +256,13 @@
 	}
 	#report a:hover {
 		color: #1E3765;
+	}
+
+	#logo {
+		padding-top: 5px;
+		margin-left: 12px;
+		margin-right: 12px;
+		border-bottom: solid 1px #0D534D;
 	}
 
 	#attribution {

@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte'
 	import mapboxgl from "mapbox-gl";
-	import Top from "./lib/Top.svelte"
 	import notScarborough from "./data/not_scarborough_osm.geo.json"
 	import bikeRoutes from "./data/bikeRoutes.geo.json"
 	import futureTransit from "./data/futureTransit.geo.json"
@@ -147,6 +146,18 @@
 			}, 'rail');
 
 			map.addLayer({
+				'id': 'greenwayNetworkHover',
+				'type': 'line',
+				'source': 'greenwayNetwork',
+				'layout': {},
+				'paint': {
+					'line-color': '#666666', 
+					'line-width': 8,
+					'line-opacity': 0
+				}
+			}, 'bridge-simple');
+
+			map.addLayer({
 				'id': 'greenwayNetwork',
 				'type': 'line',
 				'source': 'greenwayNetwork',
@@ -186,6 +197,8 @@
 					'line-dasharray': [0.5,1]
 				}
 			});
+
+			
 
 			map.addLayer({
 				'id': 'nsFill',
@@ -230,14 +243,43 @@
 
 
 
-		
+		// const popup = new mapboxgl.Popup({
+		// 	closeButton: false,
+		// 	closeOnClick: false
+		// });
 
-		map.on('mouseenter', 'greenwayNetwork', () => {
-			map.getCanvas().style.cursor = 'pointer';
-		});
-		map.on('mouseleave', 'greenwayNetwork', () => {
-			map.getCanvas().style.cursor = '';
-		})
+		// map.on('mouseenter', 'greenwayNetwork', (e) => {
+		// 	map.getCanvas().style.cursor = 'pointer';
+		// 	const popupCoordinatesXY = e.lngLat;
+		// 	var description = e.features[0].properties.route;
+		// 	popup.setLngLat(popupCoordinatesXY).setHTML(description).addTo(map);
+		// });
+		// map.on('mouseleave', 'greenwayNetwork', () => {
+		// 	map.getCanvas().style.cursor = '';
+		// 	popup.remove();
+		// })
+
+		
+		
+		// map.on('mouseenter', 'greenwayNetwork', (e) => {
+		// 	// Change the cursor style as a UI indicator.
+		// 	map.getCanvas().style.cursor = 'pointer';
+			
+		// 	// Copy coordinates array.
+		// 	const popupCoordinatesXY = e.point;
+		// 	const description = e.features[0].properties.route;
+			
+		// }
+		
+		// // Populate the popup and set its coordinates
+		// // based on the feature found.
+		// popup.setLngLat(popupCoordinatesXY).setHTML(description).addTo(map);
+		// });
+		
+		// map.on('mouseleave', 'greenwayNetwork', () => {
+		// 	map.getCanvas().style.cursor = '';
+		// 	popup.remove();
+		// });
 
 		// map.on('click', 'ct_fill', (e) => {		
 
@@ -260,19 +302,9 @@
 		// 	}
 
 		// });
-
 		
 	});
 	
-
-	function placeClick(city) {
-		ctuid = "0";
-		map.setPaintProperty('ct_fill', 'fill-color', '#fff');
-		map.panTo(city.original.geometry.coordinates);
-		map.zoonTo(10);
-	}
-
-
 </script>
 
 <svelte:head>
@@ -281,6 +313,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+
+	<link href='./assets/style.css' rel='stylesheet' />
 </svelte:head>
 
 
@@ -288,21 +322,16 @@
 
 <main>
 
-	<Top/>
-
 	<div id='map-wrapper' class="{pageWidth < 551 ? 'maps-small' : 'maps-big'}" >
 		<div id="map" bind:offsetWidth={pageWidth} ></div>
 	</div>
 
 	<Info {pageWidth}/>
 
-
-
 </main>
 
 
 <style>
-	
 	
 	@font-face {
 		font-family: TradeGothicBold;
@@ -312,14 +341,11 @@
 		font-family: 'Roboto', sans-serif;
 	}
 
-
 	main {
 		margin: auto;
 		width: 100%;
 		margin-bottom: -15px;
 	}
-
-
 
 	:global([data-svelte-search]) {
 		/* height: 50px; */
@@ -344,8 +370,7 @@
 	}
 
 	#map-wrapper {
-		margin-top: 50px;
-		/*  height: calc(100vh - 50px); */
+		margin-top: 0px;
 		width: 100%;
 		top: 0;
         left: 0;
@@ -354,7 +379,6 @@
 	}
 
 	#map {
-		/* margin-top: 50px; */
 		height: 100%;
 		width: 100%;
 		top: 0;
@@ -364,13 +388,11 @@
 	}
 
 	.maps-big {
-		height: calc(100vh - 50px);
+		height: calc(100vh - 0px);
 	}
 
 	.maps-small {
-		height: calc(100vh - 266px - 50px);
+		height: calc(100vh - 266px - 0px);
 	}
 
-	
-	
 </style>

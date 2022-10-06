@@ -1,9 +1,11 @@
 <script>
 	import logo from '../assets/top-logo.svg'
+	import sumoLogo from '../assets/sumo-logo.svg'
 </script>
 
 <div id="bar">
 	<a href="https://www.schoolofcities.utoronto.ca/"><img src={logo} alt="School of Cities"></a>
+	<a href="https://www.schoolofcities.utoronto.ca/"><img src={sumoLogo} alt="School of Cities"></a>
 </div>
 
 <style>
