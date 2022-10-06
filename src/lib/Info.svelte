@@ -62,6 +62,14 @@
 		</div>
 	</div>
 
+	<div id="report">
+		<p>Read the full report <a href="https://jamaps.github.io">here</a>, by André Sorensen,
+			Amaan Jabbar,
+			Karen Khan,
+			Allison Oki, and
+			Anastasiia Ostrovskaia  </p>
+	</div>
+
 	<!-- <a href="https://github.com/schoolofcities/population-change-canadian-cities-1996-2021/">
 		<div id="more-less" >
 			<p>click here to read more</p>
@@ -97,7 +105,7 @@
 		bottom: 0px;
     }
     .web {
-        width: 370px;
+        width: 399px;
         height: 255px;
 		border-left: solid 1px #0D534D;
 		border-bottom: solid 1px #0D534D;
@@ -139,6 +147,16 @@
 		padding-top: 8px;
 		padding-bottom: 8px;
 		border-bottom: solid 1px #0D534D;
+		overflow: hidden;
+	}
+
+	#items-left {
+		float: left;
+		padding-right: 15px;
+	}
+
+	#items-right {
+		margin-left: 15px;
 	}
 
 	#item {
@@ -148,7 +166,29 @@
 		padding: 0px;
 		color: rgb(70, 70, 70);
 	}
-	
+
+	#report {
+		font-family: Roboto, sans-serif;
+		font-size: 13px;
+		padding-top: 8px;
+		margin-top: 0px;
+		padding-bottom: 8px;
+		margin-left: 12px;
+		margin-right: 12px;
+		border-bottom: solid 1px #0D534D;
+	}
+	#report p {
+		padding: 0px;
+		margin: 0px;
+		color: rgb(70, 70, 70);
+	}
+	#report a {
+		color: rgb(0, 0, 0);
+		text-decoration: underline;
+	}
+	#report a:hover {
+		color: #8DBF2E;
+	}
 
 	#attribution {
 		font-family: Roboto, sans-serif;
@@ -161,7 +201,7 @@
 		text-decoration: underline;
 	}
 	#attribution a:hover {
-		color: black;
+		color: #8DBF2E;
 	}
 
 	#bold {
@@ -197,8 +237,6 @@
 		margin: 0px;
 	}
 	
-	a {
-		text-decoration: none;
-	}
+	
 
 </style>
