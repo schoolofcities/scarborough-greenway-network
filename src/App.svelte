@@ -1,23 +1,18 @@
 <script>
 	import { onMount } from 'svelte'
 	import mapboxgl from "mapbox-gl";
-	import notScarborough from "./data/not_scarborough_osm.geo.json"
+	import notScarborough from "./data/notScarborough.geo.json"
 	import bikeRoutes from "./data/bikeRoutes.geo.json"
 	import futureTransit from "./data/futureTransit.geo.json"
 	import futureTransitStations from "./data/futureTransitStations.geo.json"
 	import greenwayNetwork from "./data/greenwayNetwork.geo.json"
-
 	import Info from "./lib/Info.svelte";
-	import Select from "./lib/Select.svelte"
 
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w4c3h6M2tuMDIwazNuczU3bXA3ZXpvaSJ9.ShjnM8qiYP6yqz2PcAUBOg';
 
 	let map;
 
 	let pageWidth;
-
-	
-	// greenwayNetwork = greenwayNetwork.filter(d => d.age > 37);
 	
 	const maxBounds = [
 		[-79.56371, 43.56172], // SW coords
@@ -198,8 +193,6 @@
 				}
 			});
 
-			
-
 			map.addLayer({
 				'id': 'nsFill',
 				'type': 'fill',
@@ -210,8 +203,6 @@
 					'fill-opacity': 0.6
 				}
 			});
-
-			
 
 			map.addLayer({
 				'id': 'nsLine',
@@ -226,7 +217,6 @@
 				}
 			});
 
-			
 		});
 
 		if (pageWidth < 500) {
@@ -329,6 +319,8 @@
 	<Info {pageWidth}/>
 
 </main>
+
+
 
 
 <style>

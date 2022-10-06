@@ -155,7 +155,6 @@
 		margin-bottom: 0px;
 		border-bottom: solid 1px #0D534D;
 	}
-
 	#title h1 {
 		font-family: Roboto, sans-serif;
 		font-size: 23px;
@@ -165,7 +164,6 @@
 		padding-bottom: 0px;
 		margin: 0px;
 	}
-
 	#title h2 {
 		margin-top: -5px;
 		color: rgb(70, 70, 70);
@@ -186,39 +184,27 @@
 		border-bottom: solid 1px #0D534D;
 		overflow: hidden;
 	}
-
-	
-
 	#items-status {
 		padding-bottom: 7px;
 	}
-
 	#items-left {
 		padding-right: 15px;
 	}
-
 	/* #items-right {
 		margin-left: 15px;
 	} */
-
 	.web-l {
 		float: left;
 	}
-
 	.mobile-l {
 		float: none;
 	}
-
 	.web-r {
 		margin-left: 15px;
 	}
-
 	.mobile-r {
 		margin-left: 0px;
 	}
-
-	
-
 	#item {
 		font-family: Roboto, sans-serif;
 		font-size: 13px;
@@ -227,7 +213,6 @@
 		color: #464646;
 	}
 	#item a {
-		/* color: rgb(0, 0, 0); */
 		color: #007FA3;
 		text-decoration: underline;
 	}
@@ -278,40 +263,5 @@
 	#attribution a:hover {
 		color: #1E3765;
 	}
-
-	#bold {
-		color: black;
-		font-weight: bold;
-		font-size: 14px;
-	}
-
-	#more-less {
-		height: 20px;
-		margin: 0px;
-		padding: 0px;
-		padding-bottom: -5px;		
-		margin-top: -15px;
-		padding-left: 20px;
-		padding-right: 20px;
-		border-top: solid 1px #0D534D;
-        border-bottom: solid 1px #0D534D;
-		font-family: Roboto, sans-serif;
-		font-size: 12px;
-		background-color: rgb(225, 225, 225);
-		text-align: center;
-	}
-	#more-less:hover {
-		cursor: pointer;
-		background-color: #F1C500;
-	}
-
-	#more-less p {
-		color: #0D534D;
-		font-family: Roboto, sans-serif;
-		padding: 0px;
-		margin: 0px;
-	}
-	
-	
 
 </style>
