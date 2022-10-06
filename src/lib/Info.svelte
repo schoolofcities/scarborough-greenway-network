@@ -19,25 +19,25 @@
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6D247A;stroke-width:3" />
 				</svg>
-				East Highland Creek Greenway
+				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">East Highland Creek Greenway</a>
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#AB1368;stroke-width:3" />
 				</svg>
-				West Highland Creek Greenway
+				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">West Highland Creek Greenway</a>
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#007FA3;stroke-width:3" />
 				</svg>
-				Taylor Massey Creek Greenway
+				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Taylor Massey Creek Greenway</a>
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#00A189;stroke-width:3" />
 				</svg>
-				Finch Hydro Corridor Greenway
+				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Finch Hydro Corridor Greenway</a>
 			</p>
 		</div>
 		<div id="items-right">
@@ -45,13 +45,13 @@
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#DC4633;stroke-width:3" />
 				</svg>
-				Waterfront Greenway
+				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Waterfront Greenway</a>
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6FC7EA;stroke-width:3" />
 				</svg>
-				Rouge Park Greenway
+				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Rouge Park Greenway</a>
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
@@ -63,11 +63,11 @@
 	</div>
 
 	<div id="report">
-		<p>Read the full report <a href="https://jamaps.github.io">here</a>, by André Sorensen,
+		<p><a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Click here to read the report  </a> by André Sorensen,
 			Amaan Jabbar,
 			Karen Khan,
 			Allison Oki, and
-			Anastasiia Ostrovskaia  </p>
+			Anastasiia Ostrovskaia </p>
 	</div>
 
 	<!-- <a href="https://github.com/schoolofcities/population-change-canadian-cities-1996-2021/">
@@ -77,8 +77,8 @@
 	</a> -->
 
 	<p id="attribution">
-		Map built by <a href="https://jamaps.github.io">Jeff Allen</a> with  
-		©<a href='https://www.mapbox.com/about/maps/'>Mapbox</a> & ©<a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> / <a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>
+		Map built by <a href="https://jamaps.github.io" target="_blank">Jeff Allen</a> with  
+		©<a href='https://www.mapbox.com/about/maps/' target="_blank">Mapbox</a> & ©<a href='http://www.openstreetmap.org/copyright' target="_blank">OpenStreetMap</a> / <a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>
 	</p>
 
 </div>
@@ -94,7 +94,7 @@
 		background-color: rgb(250, 250, 250);
         right: 0;
 		position: absolute;
-		opacity: 0.9;
+		opacity: 0.94;
 		box-shadow: 0 3px 0 0 rgba(197, 197, 197, 0.168);
 		
 	}
@@ -166,6 +166,14 @@
 		padding: 0px;
 		color: rgb(70, 70, 70);
 	}
+	#item a {
+		/* color: rgb(0, 0, 0); */
+		color: #007FA3;
+		text-decoration: none;
+	}
+	#item a:hover {
+		color: #1E3765;
+	}
 
 	#report {
 		font-family: Roboto, sans-serif;
@@ -183,11 +191,11 @@
 		color: rgb(70, 70, 70);
 	}
 	#report a {
-		color: rgb(0, 0, 0);
-		text-decoration: underline;
+		color: #007FA3;
+		text-decoration: none;
 	}
 	#report a:hover {
-		color: #8DBF2E;
+		color: #1E3765;
 	}
 
 	#attribution {
@@ -197,11 +205,11 @@
 		margin-right: 12px;
 	}
 	#attribution a {
-		color: rgb(74, 74, 74);
-		text-decoration: underline;
+		color: #007FA3;
+		text-decoration: none;
 	}
 	#attribution a:hover {
-		color: #8DBF2E;
+		color: #1E3765;
 	}
 
 	#bold {

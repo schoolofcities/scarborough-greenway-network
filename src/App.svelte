@@ -11,13 +11,14 @@
 	import Info from "./lib/Info.svelte";
 	import Select from "./lib/Select.svelte"
 
-	
-
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2Nob29sb2ZjaXRpZXMiLCJhIjoiY2w4c3h6M2tuMDIwazNuczU3bXA3ZXpvaSJ9.ShjnM8qiYP6yqz2PcAUBOg';
 
 	let map;
 
 	let pageWidth;
+
+	
+	// greenwayNetwork = greenwayNetwork.filter(d => d.age > 37);
 	
 	const maxBounds = [
 		[-79.56371, 43.56172], // SW coords
@@ -30,6 +31,8 @@
 	]
 	
 	onMount(() => {
+		greenwayNetwork.features = greenwayNetwork.features.filter(d => d.properties.interim === 0);
+
 		map = new mapboxgl.Map({
 			container: 'map', 
 			style: 'mapbox://styles/schoolofcities/cl8sy8euo002f14tbqhwrexda',
@@ -57,7 +60,6 @@
 
 			const layers = map.getStyle().layers;
 
-			console.log(layers);
 			// Find the index of the first symbol layer in the map style.
 			let firstSymbolId;
 			for (const layer of layers) {
@@ -159,7 +161,7 @@
 						'#00A189',
 						/* other */ '#ccc'
 						],
-					'line-width': 3
+					'line-width': 4
 				}
 			}, 'bridge-simple');
 
