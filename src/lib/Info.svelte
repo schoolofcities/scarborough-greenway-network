@@ -99,12 +99,6 @@
 			Anastasiia Ostrovskaia </p>
 	</div>
 
-	<!-- <a href="https://github.com/schoolofcities/population-change-canadian-cities-1996-2021/">
-		<div id="more-less" >
-			<p>click here to read more</p>
-		</div>
-	</a> -->
-
 	<div id="logo">
 		
 		<a href="https://www.schoolofcities.utoronto.ca/"><img height="55" src={logo} alt="School of Cities"></a>
@@ -248,6 +242,9 @@
 		margin-left: 12px;
 		margin-right: 12px;
 		border-bottom: solid 1px #0D534D;
+	}
+	#logo a:hover {
+		opacity: 0.7;
 	}
 
 	#attribution {
