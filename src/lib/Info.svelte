@@ -12,8 +12,9 @@
 <div id="panel" class="{pageWidth < 551 ? 'mobile' : 'web'}">
 
 	<div id="title">
-		<p id="h1">Scarborough Greenway Network</p>
-		<p id="h2"><i>Towards the world's best offroad trail network</i></p>
+		<p id="h1">The Scarborough Greenway Network</p>
+		<p id="h2"><i>Building an outstanding
+			offroad trail network</i></p>
 	</div>
 
 	<div id="items">
@@ -159,7 +160,7 @@
 		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 23px;
+		font-size: 22px;
 		color: #0D534D;
 		padding: 0px;
 		padding-top: 12px;
