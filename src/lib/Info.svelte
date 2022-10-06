@@ -12,8 +12,8 @@
 <div id="panel" class="{pageWidth < 551 ? 'mobile' : 'web'}">
 
 	<div id="title">
-		<h1>Scarborough Greenway Network</h1>
-		<h2><i>Towards the world's best offroad trail network</i></h2>
+		<p id="h1">Scarborough Greenway Network</p>
+		<p id="h2"><i>Towards the world's best offroad trail network</i></p>
 	</div>
 
 	<div id="items">
@@ -114,6 +114,13 @@
 
 </div>
 
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</svelte:head>
+
+
 
 <style>
     #panel {
@@ -141,24 +148,26 @@
 		border-left: solid 1px #0D534D;
 		border-bottom: solid 1px #0D534D;
 		bottom: 5px;
-    }
-
+	}
 	#title {
 		margin-left: 12px;
 		margin-right: 12px;
 		margin-bottom: 0px;
 		border-bottom: solid 1px #0D534D;
 	}
-	#title h1 {
-		font-family: Roboto, sans-serif;
+	#h1 {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 700;
 		font-size: 23px;
 		color: #0D534D;
 		padding: 0px;
 		padding-top: 12px;
 		padding-bottom: 0px;
 		margin: 0px;
+		line-height: 25vpx;
 	}
-	#title h2 {
+	#h2 {
 		margin-top: -5px;
 		color: rgb(70, 70, 70);
 		font-family: Roboto, sans-serif;
@@ -168,6 +177,7 @@
 		padding-top: 5px;
 		padding-bottom: 5px;
 		margin: 0px;
+		line-height: 25px;
 	}
 
 	#items {
@@ -205,6 +215,7 @@
 		margin: 0px;
 		padding: 0px;
 		color: #464646;
+		line-height: 16px;
 	}
 	#item a {
 		color: #007FA3;
@@ -223,6 +234,7 @@
 		margin-left: 12px;
 		margin-right: 12px;
 		border-bottom: solid 1px #0D534D;
+		line-height: 16px;
 	}
 	#report p {
 		padding: 0px;
@@ -252,6 +264,7 @@
 		font-size: 10px;
 		margin-left: 12px;
 		margin-right: 12px;
+		line-height: 15px;
 	}
 	#attribution a {
 		color: #007FA3;
