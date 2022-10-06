@@ -31,7 +31,12 @@
 	]
 	
 	onMount(() => {
+
 		greenwayNetwork.features = greenwayNetwork.features.filter(d => d.properties.interim === 0);
+
+		const greenwayNetworkDash = JSON.parse(JSON.stringify(greenwayNetwork));
+		
+		greenwayNetworkDash.features = greenwayNetworkDash.features.filter(d => d.properties.proposed === 1);
 
 		map = new mapboxgl.Map({
 			container: 'map', 
@@ -92,6 +97,11 @@
 			map.addSource('greenwayNetwork', {
 				'type': 'geojson',
 				'data': greenwayNetwork
+			});
+
+			map.addSource('greenwayNetworkDash', {
+				'type': 'geojson',
+				'data': greenwayNetworkDash
 			});
 
 			map.addLayer({
@@ -161,9 +171,21 @@
 						'#00A189',
 						/* other */ '#ccc'
 						],
-					'line-width': 4
+					'line-width': 4					
 				}
 			}, 'bridge-simple');
+
+			map.addLayer({
+				'id': 'greenwayNetworkDash',
+				'type': 'line',
+				'source': 'greenwayNetworkDash',
+				'layout': {},
+				'paint': {
+					'line-color': '#fff', 
+					'line-width': 4,
+					'line-dasharray': [0.5,1]
+				}
+			});
 
 			map.addLayer({
 				'id': 'nsFill',
@@ -175,6 +197,8 @@
 					'fill-opacity': 0.6
 				}
 			});
+
+			
 
 			map.addLayer({
 				'id': 'nsLine',
@@ -195,11 +219,11 @@
 		if (pageWidth < 560) {
 		map.zoomTo(10)
 		} else if (pageWidth < 700) {
-		map.zoomTo(10.5)
+		map.zoomTo(10)
 		} else if (pageWidth < 900) {
-		map.zoomTo(11)
+		map.zoomTo(10)
 		} else if (pageWidth < 1100) {
-		map.zoomTo(11.5)
+		map.zoomTo(11)
 		} else {
 		map.zoomTo(12)
 		}
@@ -266,7 +290,7 @@
 
 	<Top/>
 
-	<div id='map-wrapper' class="{pageWidth < 641 ? 'maps-small' : 'maps-big'}" >
+	<div id='map-wrapper' class="{pageWidth < 551 ? 'maps-small' : 'maps-big'}" >
 		<div id="map" bind:offsetWidth={pageWidth} ></div>
 	</div>
 
@@ -344,7 +368,7 @@
 	}
 
 	.maps-small {
-		height: calc(100vh - 255px - 50px);
+		height: calc(100vh - 266px - 50px);
 	}
 
 	

@@ -6,7 +6,7 @@
 
 
 
-<div id="panel" class="{pageWidth < 641 ? 'mobile' : 'web'}">
+<div id="panel" class="{pageWidth < 551 ? 'mobile' : 'web'}">
 
 	<div id="title">
 		<h1>Scarborough Greenway Network</h1>
@@ -14,6 +14,26 @@
 	</div>
 
 	<div id="items">
+
+		<div id="items-status">
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#464646;stroke-width:3" />
+				</svg>
+				Existing &nbsp; &nbsp; &nbsp;
+
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#464646;stroke-width:3" />
+					<line x1="2" y1="5" x2="3" y2="5" style="stroke:#fff;stroke-width:3" />
+					<line x1="6" y1="5" x2="7" y2="5" style="stroke:#fff;stroke-width:3" />
+					<line x1="10" y1="5" x2="11" y2="5" style="stroke:#fff;stroke-width:3" />
+					<line x1="14" y1="5" x2="15" y2="5" style="stroke:#fff;stroke-width:3" />
+					<line x1="18" y1="5" x2="19" y2="5" style="stroke:#fff;stroke-width:3" />
+				</svg>
+				Proposed
+			</p>
+		</div>
+
 		<div id="items-left">
 			<p id="item">
 				<svg height="10" width="20">
@@ -60,6 +80,7 @@
 				The Meadoway
 			</p>
 		</div>
+		
 	</div>
 
 	<div id="report">
@@ -87,7 +108,7 @@
 <style>
     #panel {
 		margin: auto;
-        height: 256px;
+        height: 267px;
 		border-top: solid 1px #0D534D;
 		float: right;
 		z-index: 9;
@@ -102,11 +123,12 @@
         width: 100%;
         border-top-right-radius: 0px;
         border-right: none;
+		border-bottom: none;
 		bottom: 0px;
     }
     .web {
         width: 399px;
-        height: 255px;
+        height: 265px;
 		border-left: solid 1px #0D534D;
 		border-bottom: solid 1px #0D534D;
 		bottom: 5px;
@@ -150,6 +172,10 @@
 		overflow: hidden;
 	}
 
+	#items-status {
+		padding-bottom: 5px;
+	}
+
 	#items-left {
 		float: left;
 		padding-right: 15px;
@@ -164,12 +190,12 @@
 		font-size: 13px;
 		margin: 0px;
 		padding: 0px;
-		color: rgb(70, 70, 70);
+		color: #464646;
 	}
 	#item a {
 		/* color: rgb(0, 0, 0); */
 		color: #007FA3;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 	#item a:hover {
 		color: #1E3765;
@@ -192,7 +218,7 @@
 	}
 	#report a {
 		color: #007FA3;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 	#report a:hover {
 		color: #1E3765;
@@ -206,7 +232,7 @@
 	}
 	#attribution a {
 		color: #007FA3;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 	#attribution a:hover {
 		color: #1E3765;
