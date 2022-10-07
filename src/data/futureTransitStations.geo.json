@@ -23,7 +23,7 @@
 { "type": "Feature", "properties": { "LOCATION_N": "Milliken", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Stouffville" }, "geometry": { "type": "Point", "coordinates": [ -79.301460596080631, 43.823048603154461 ] } },
 { "type": "Feature", "properties": { "LOCATION_N": "Agincourt", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Stouffville" }, "geometry": { "type": "Point", "coordinates": [ -79.284372098001185, 43.786397036141651 ] } },
 { "type": "Feature", "properties": { "LOCATION_N": "Kennedy", "STATUS": "Existing", "TECHNOLOGY": "GO Rail", "NAME": "Stouffville" }, "geometry": { "type": "Point", "coordinates": [ -79.264532363275194, 43.732266101735114 ] } },
-{ "type": "Feature", "properties": { "LOCATION_N": "Finch-Kennedy", "STATUS": "Proposed", "TECHNOLOGY": "GO Rail", "NAME": "Stouffville" }, "geometry": { "type": "Point", "coordinates": [ -79.291601071588659, 43.802518832937707 ] } },
+
 
 { "type": "Feature", "properties": { "LOCATION_N": "McCowan", "STATUS": "Advancing", "TECHNOLOGY": "Subway", "NAME": "Scarborough Subway" }, "geometry": { "type": "Point", "coordinates": [ -79.258773161347094, 43.78962166581119 ] } },
 { "type": "Feature", "properties": { "LOCATION_N": "Lawrence East", "STATUS": "Advancing", "TECHNOLOGY": "Subway", "NAME": "Scarborough Subway" }, "geometry": { "type": "Point", "coordinates": [ -79.245456549965155, 43.755448365370768 ] } }

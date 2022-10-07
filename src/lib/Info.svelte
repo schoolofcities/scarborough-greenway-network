@@ -45,46 +45,46 @@
 			<p id="item">
 
 				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6D247A;stroke-width:3" />
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6d9424;stroke-width:3" />
 				</svg>
-				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">East Highland Creek Greenway</a>
-			</p>
-			<p id="item">
-				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#AB1368;stroke-width:3" />
-				</svg>
-				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">West Highland Creek Greenway</a>
-			</p>
-			<p id="item">
-				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#007FA3;stroke-width:3" />
-				</svg>
-				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Taylor Massey Creek Greenway</a>
+				<a href="https://www.mobilitynetwork.utoronto.ca/wp-content/uploads/2022/10/3.3-Final-East-Highland-Creek-Route-Profile.pdf" target="_blank">East Highland Creek Greenway</a>
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#00A189;stroke-width:3" />
 				</svg>
-				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Finch Hydro Corridor Greenway</a>
+				<a href="https://www.mobilitynetwork.utoronto.ca/wp-content/uploads/2022/10/3.2-Final-West-Highland-Creek-Route-Profile.pdf" target="_blank">West Highland Creek Greenway</a>
+			</p>
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#df1989;stroke-width:3" />
+				</svg>
+				<a href="https://www.mobilitynetwork.utoronto.ca/wp-content/uploads/2022/10/3.1-Final-Taylor-Massey-Creek-Route-Profile.pdf" target="_blank">Taylor Massey Creek Greenway</a>
+			</p>
+			<p id="item">
+				<svg height="10" width="20">
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#872698;stroke-width:3" />
+				</svg>
+				<a href="https://www.mobilitynetwork.utoronto.ca/wp-content/uploads/2022/10/3.5-Final-Finch-Hydro-Corridor-Greenway-Route-Profile.pdf" target="_blank">Finch Hydro Corridor Greenway</a>
 			</p>
 		</div>
 
 		<div id="items-right" class="{pageWidth < 395 ? 'mobile-r' : 'web-r'}">
 			<p id="item">
 				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#DC4633;stroke-width:3" />
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#325ba8;stroke-width:3" />
 				</svg>
-				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Waterfront Greenway</a>
+				<a href="https://www.mobilitynetwork.utoronto.ca/wp-content/uploads/2022/10/3.6-Final-Scarborough-Waterfront-Route-Profile.pdf" target="_blank">Waterfront Greenway</a>
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#6FC7EA;stroke-width:3" />
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#be4535;stroke-width:3" />
 				</svg>
-				<a href="https://www.utsc.utoronto.ca/suburban-mobilities" target="_blank">Rouge Park Greenway</a>
+				<a href="https://www.mobilitynetwork.utoronto.ca/wp-content/uploads/2022/10/3.4-Final-Rouge-Park-Profile.pdf" target="_blank">Rouge Park Greenway</a>
 			</p>
 			<p id="item">
 				<svg height="10" width="20">
-					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#F1C500;stroke-width:3" />
+					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#e6bc01;stroke-width:3" />
 				</svg>
 				The Meadoway
 			</p>
