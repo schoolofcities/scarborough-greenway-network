@@ -386,7 +386,7 @@
 	}
 
 	.maps-small {
-		height: calc(100vh - 266px - 0px);
+		height: calc(100vh - 342px - 0px);
 	}
 
 </style>
