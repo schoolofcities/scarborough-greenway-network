@@ -86,9 +86,11 @@
 				<svg height="10" width="20">
 					<line x1="0" y1="5" x2="20" y2="5" style="stroke:#e6bc01;stroke-width:3" />
 				</svg>
-				The Meadoway
+				<a href="https://themeadoway.ca/" target="_blank">The Meadoway</a>
 			</p>
 		</div>
+		
+
 		
 	</div>
 
