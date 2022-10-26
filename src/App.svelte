@@ -231,68 +231,6 @@
 		} else {
 		map.zoomTo(11.75)
 		}
-
-
-
-		// const popup = new mapboxgl.Popup({
-		// 	closeButton: false,
-		// 	closeOnClick: false
-		// });
-
-		// map.on('mouseenter', 'greenwayNetwork', (e) => {
-		// 	map.getCanvas().style.cursor = 'pointer';
-		// 	const popupCoordinatesXY = e.lngLat;
-		// 	var description = e.features[0].properties.route;
-		// 	popup.setLngLat(popupCoordinatesXY).setHTML(description).addTo(map);
-		// });
-		// map.on('mouseleave', 'greenwayNetwork', () => {
-		// 	map.getCanvas().style.cursor = '';
-		// 	popup.remove();
-		// })
-
-		
-		
-		// map.on('mouseenter', 'greenwayNetwork', (e) => {
-		// 	// Change the cursor style as a UI indicator.
-		// 	map.getCanvas().style.cursor = 'pointer';
-			
-		// 	// Copy coordinates array.
-		// 	const popupCoordinatesXY = e.point;
-		// 	const description = e.features[0].properties.route;
-			
-		// }
-		
-		// // Populate the popup and set its coordinates
-		// // based on the feature found.
-		// popup.setLngLat(popupCoordinatesXY).setHTML(description).addTo(map);
-		// });
-		
-		// map.on('mouseleave', 'greenwayNetwork', () => {
-		// 	map.getCanvas().style.cursor = '';
-		// 	popup.remove();
-		// });
-
-		// map.on('click', 'ct_fill', (e) => {		
-
-		// 	var features = map.queryRenderedFeatures(e.point, { layers: ['ct_fill'] });
-
-		// 	if (ctuid != features[0].properties.CTUID) {
-		// 		var style = [
-		// 			"match",
-		// 			["get", "CTUID"],
-		// 			[features[0].properties.CTUID],
-		// 			"#f1c500",
-		// 			"#fff"
-		// 		]
-		// 		map.setPaintProperty('ct_fill', 'fill-color', style)
-		// 		ctuid = features[0].properties.CTUID
-
-		// 	} else {
-		// 		map.setPaintProperty('ct_fill', 'fill-color', '#fff')
-		// 		ctuid = '0'
-		// 	}
-
-		// });
 		
 	});
 	
@@ -342,7 +280,6 @@
 	}
 
 	:global([data-svelte-search]) {
-		/* height: 50px; */
 		border: solid 1px lightgrey;
 		border-radius: 4px;
 		background-color: none;
